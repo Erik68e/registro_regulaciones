@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Cambiar Contraseña</h2>
+    <form (ngSubmit)="cambiarContrasena()">
+        <div class="form-group">
+            <label for="oldPassword">Contraseña Anterior:</label>
+            <input type="password" id="oldPassword" name="oldPassword" [(ngModel)]="oldPassword" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="newPassword">Nueva Contraseña:</label>
+            <input type="password" id="newPassword" name="newPassword" [(ngModel)]="newPassword" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cambiar Contraseña</button>
+    </form>
+</div>

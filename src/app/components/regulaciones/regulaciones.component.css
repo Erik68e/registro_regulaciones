@@ -1,0 +1,32 @@
+.custom-container {
+    width: 90%;
+    margin: auto;
+    overflow-x: auto;
+}
+
+.custom-table {
+    width: 100%;
+}
+
+.custom-button {
+    background-color: #20295c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 15px;
+    width: 130px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.custom-button:hover {
+    background-color: white;
+    color: #20295c;
+}
+
+.al {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

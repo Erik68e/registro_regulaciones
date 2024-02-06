@@ -1,0 +1,57 @@
+<section class="formulario-section">
+
+    <form (submit)="submitForm()">
+        <div>
+            <label for="regulacion_id">ID de regulación:</label>
+            <input type="number" id="regulacion_id" name="regulacion_id" [(ngModel)]="informacion.regulacion_id"
+                required>
+        </div>
+        <div>
+            <label for="regulacion">Regulación:</label>
+            <input type="text" id="regulacion" name="regulacion" [(ngModel)]="informacion.regulacion" required>
+        </div>
+        <div>
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" [(ngModel)]="informacion.url" required>
+        </div>
+        <div>
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" [(ngModel)]="informacion.descripcion" required>
+        </div>
+        <div>
+            <label for="tipo">Tipo:</label>
+            <input type="text" id="tipo" name="tipo" [(ngModel)]="informacion.tipo" required>
+        </div>
+        <div>
+            <label for="institucion_emisora">Institucion Emisora:</label>
+            <input type="text" id="institucion_emisora" name="institucion_emisora"
+                [(ngModel)]="informacion.institucion_emisora" required>
+        </div>
+        <div>
+            <label for="registro_oficial_numero">Registro Oficial Numero:</label>
+            <input type="text" id="registro_oficial_numero" name="registro_oficial_numero"
+                [(ngModel)]="informacion.registro_oficial_numero" required>
+        </div>
+        <div>
+            <label for="registro_oficial_fecha">Registro Oficial Fecha:</label>
+            <input type="text" id="registro_oficial_fecha" name="registro_oficial_fecha"
+                [(ngModel)]="informacion.registro_oficial_fecha" required>
+        </div>
+        <div>
+            <label for="suscripcion"> Suscripcion:</label>
+            <input type="text" id="suscripcion" name="suscripcion" [(ngModel)]="informacion.suscripcion" required>
+        </div>
+        <div>
+            <label for="archivo">Archivo:</label>
+            <input type="text" id="archivo" name="archivo" [(ngModel)]="informacion.archivo" required>
+        </div>
+        <div>
+            <label for="modificado">Modificado:</label>
+            <input type="text" id="modificado" name="modificado" [(ngModel)]="informacion.modificado" required>
+        </div>
+
+        <div>
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+</section>

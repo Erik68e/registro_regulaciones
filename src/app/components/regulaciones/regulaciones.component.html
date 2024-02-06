@@ -1,0 +1,32 @@
+<div class="custom-container">
+    <table class="table custom-table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Regulaciones</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Institucion Emisora</th>
+                <th>Descargar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let informacion of informaciones">
+                <th scope="row">{{informacion.regulacion_id}}</th>
+                <td>{{informacion.regulacion}}</td>
+                <td>{{informacion.descripcion}}</td>
+                <td>{{informacion.tipo}}</td>
+                <td>{{informacion.institucion_emisora}}</td>
+                <td>
+                    <button *ngIf="authService.loggedIn()" (click)="descargarExcel(informacion)" class="custom-button" >Excel</button>
+                    <button *ngIf="authService.loggedIn()" (click)="descargarPDF(informacion.archivo)" class="custom-button">PDF</button>
+                    <button *ngIf="authService.loggedIn()" (click)="abrirURL(informacion.url)" class="custom-button">Informacion</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="al">
+    <button *ngIf="authService.loggedIn()" (click)="generarReporte()" class="custom-button">REPORTE</button>
+</div>

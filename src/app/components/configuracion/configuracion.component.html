@@ -1,0 +1,57 @@
+<div class="container">
+    <h2>Configuración de usuarios</h2>
+
+    <form [formGroup]="usuarioForm" (ngSubmit)="agregarUsuario()">
+        <div class="form-group">
+            <label for="usuario">Usuario:</label>
+            <input type="text" formControlName="usuario" class="form-control" placeholder="Ingrese el nombre de usuario"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" formControlName="email" class="form-control" placeholder="Ingrese el correo electrónico"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" formControlName="password" class="form-control" placeholder="Ingrese la contraseña"
+                required>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+    </form>
+
+    <hr>
+</div>
+<div>
+    <h3>Lista de Usuarios</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Usuario</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Role</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios">
+                <td><input type="text" [(ngModel)]="usuario._id"></td>
+                <td><input type="text" [(ngModel)]="usuario.usuario"></td>
+                <td><input type="email" [(ngModel)]="usuario.email"></td>
+                <td><input type="password" [(ngModel)]="usuario.password"></td>
+                 <td>
+                    <select [(ngModel)]="usuario.role">
+                        <option value="operador">Operador</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+                </td>
+                <td>
+                    <button class="btn btn-primary" (click)="editarUsuario(usuario)">Guardar</button>
+                    <button class="btn btn-danger" (click)="eliminarUsuario(usuario._id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

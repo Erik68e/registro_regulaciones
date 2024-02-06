@@ -1,0 +1,32 @@
+.clase1 {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    background-color: #20295c;
+}
+
+.clase1 h1:last-child {
+    font-size: 8px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin-block-end: 5px;
+    padding: 0px;
+    display: flex;
+    background-color: #20295c;
+}
+
+.nav-list li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list li a:hover {
+    background-color: white;
+    color: black;
+}

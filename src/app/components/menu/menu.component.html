@@ -1,0 +1,19 @@
+<header class="clase1">
+    <h1><strong>{{ title }}</strong></h1>
+    <h1>ENFOCADO EN REGULACIONES</h1>
+</header>
+
+<nav>
+    <ul class="nav-list">
+        <li> <a routerLink="/home"> Inicio </a> </li>
+        <li> <a routerLink="/regulaciones"> Regulaciones Registradas </a> </li>
+        <li> <a routerLink="/solicitud"> Solicitud </a> </li>
+        <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+            <li> <a routerLink="/login"> Acceso</a> </li>
+        </ng-container>
+        <ng-template #loggedIn>
+            <li> <a (click)="authService.logout()"> Salir</a> </li>
+            <li> <a routerLink="/perfil"> Perfil</a> </li>
+        </ng-template>
+    </ul>
+</nav>
